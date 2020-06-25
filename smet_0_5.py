@@ -3,13 +3,14 @@
 # smet version 0.1 -Spatial Metadata Extraction tool -Byron Cochrane 14,Sept,2007
 #      version 0.3 -Spatial Metadata Extraction Tool -Byron Cochrane 17, Oct 2008
 
-import wx, wx.gizmos, os, urllib.request, urllib.error, urllib.parse, urllib.request, urllib.parse, urllib.error, dircache, webbrowser
+import gi
+gi.require_version("Gtk", "3.0")
+from gi.repository import Gtk
+
+import os, dircache, webbrowser
+#import urllib.request, urllib.parse, urllib.error
 import MetadataRecord as MDR, GeoObject as GO, InfoView
 from xml.etree import ElementTree as etree
-
-if wx.Platform == '__WXMSW__':
-    import wx.lib.iewin as iewin
-    
 
 #--------------------------------------------------------------------
 
@@ -17,7 +18,8 @@ if wx.Platform == '__WXMSW__':
 #---MyFrame---#000000#FFFFFF----------------------------------------------------
 #---window object---------------
 
-class MyFrame(wx.Frame):
+link = ""
+"""class MyFrame(wx.Frame):
     def __init__(self, *args, **kwds):
         self.path = self.dlg = self.fc = ''
         cdir = os.getcwd()
@@ -536,13 +538,13 @@ class MyControls(object):
             
             self.frame.statusbar.SetStatusText(link)
             
-            htxt = """<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN">
+            htxt = """"""<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN">
                     <html>
                     <head>
                     <meta http-equiv="REFRESH" content="0;""" + link + """">
                     </head>
                     <BODY></BODY>
-                    </HTML>"""
+                    </HTML>""""""
                     
             itemID = self.frame.currentItem
             pydata = self.frame.tree_ctrl.GetPyData(itemID)
@@ -598,4 +600,4 @@ if __name__ == "__main__":
     win = MyFrame(None, -1, title="Spatial Metadata Extraction Tool", size=(700,500))
     app.SetTopWindow(win)
     win.Show()
-    app.MainLoop()
+    app.MainLoop()"""

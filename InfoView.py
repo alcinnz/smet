@@ -4,8 +4,8 @@ InfoView -- SMET
 A view for displaying (and editing) highly structured data communicated in XML.
 Inspired by METlite and GeoNetwork.
 """
-import wx
-from wx.lib import stattext, scrolledpanel
+#import wx
+#from wx.lib import stattext, scrolledpanel
 from collections import OrderedDict
 
 data = OrderedDict()
@@ -20,7 +20,7 @@ dev['Founder/leader'] = "Byron Cochrane"
 dev['First Employee'] = "Adrian Cochrane"
 data['Another label'] = "Another Value"
 
-class InfoView(wx.Panel):
+"""class InfoView(wx.Panel):
 	def __init__(self, *args, **kwargs):
 		data = kwargs.pop('data', ())
 		wx.Panel.__init__(self, *args, **kwargs)
@@ -136,4 +136,4 @@ if __name__ == '__main__':
 
 	frame.Show()
 
-	app.MainLoop()
+	app.MainLoop()"""
