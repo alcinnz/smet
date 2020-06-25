@@ -601,3 +601,12 @@ if __name__ == "__main__":
     app.SetTopWindow(win)
     win.Show()
     app.MainLoop()"""
+
+if __name__ == "__main__":
+    win = Gtk.Window()
+    win.title = "Spatial Metadata Extraction Tool"
+    win.default_width, win.default_height = 700, 500
+    win.show()
+    win.connect("destroy", Gtk.main_quit)
+
+    Gtk.main()
